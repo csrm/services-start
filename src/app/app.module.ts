@@ -6,19 +6,22 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
-import { AccountsService } from './common/accounts.service'
+import { AccountsService } from './common/accounts.service';
+import { LoggingService } from './common/logging.service';
+import { AlertBoxComponent } from './alert-box/alert-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    AlertBoxComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
   ],
-  providers: [AccountsService],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
